@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palworld Settings Configuration</title>
+    <!-- 引入 Tailwind CSS -->
+    <link href="https://cdn.tailwindcss.com/3.4.1" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
+
+</head>
+<body class="bg-gray-200 py-10 px-5">
+    <div class="max-w-2xl mx-auto bg-white p-8 shadow-lg rounded-lg overflow-auto">
+        <a href="https://www.xuehaiwu.com" class="inline-flex items-center px-8 py-4 border border-transparent text-2xl font-extrabold rounded-md text-white bg-light-blue-600 hover:bg-light-blue-800 shadow-xl">
+            返回首页
+        </a>
+        <h2 class="text-2xl mb-6 text-center font-semibold">Palworld 设置配置</h2>
+        <a href="https://curl.qcloud.com/Zyl6sYlc" class="inline-flex items-center px-8 py-4 border border-transparent text-2xl font-extrabold rounded-md text-white bg-light-blue-600 hover:bg-light-blue-800 shadow-xl">
+            帕鲁适配服务器购买
+        </a>
+        <h3 class="text-xl mb-4 text-center font-semibold">任何从 1 开始的设置都是乘数（即将它们设置为 2 将使效果加倍，0.5 将减半）。设置可以设置为 0，例如完全关闭玩家伤害。</h3>
+        <form action="generate_config.php" method="post" class="space-y-4">
+            <div>
+                <label for="Difficulty" class="block mb-2">难度，对于专用服务器来说似乎无关紧要。可以设置Casual休闲，Normal正常，Hard困难。</label>
+                <input type="text" name="Difficulty" id="Difficulty" value="None" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="DayTimeSpeedRate" class="block mb-2">白天的持续时间</label>
+                <input type="text" name="DayTimeSpeedRate" id="DayTimeSpeedRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="NightTimeSpeedRate" class="block mb-2">夜晚的持续时间</label>
+                <input type="text" name="NightTimeSpeedRate" id="NightTimeSpeedRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="ExpRate" class="block mb-2">经验值倍率</label>
+                <input type="text" name="ExpRate" id="ExpRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PalCaptureRate" class="block mb-2">捕获帕鲁的成功倍率</label>
+                <input type="text" name="PalCaptureRate" id="PalCaptureRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PalSpawnNumRate" class="block mb-2">帕鲁出现数量倍率</label>
+                <input type="text" name="PalSpawnNumRate" id="PalSpawnNumRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PalDamageRateAttack" class="block mb-2">帕鲁攻击伤害倍率</label>
+                <input type="text" name="PalDamageRateAttack" id="PalDamageRateAttack" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PalDamageRateDefense" class="block mb-2">帕鲁承受伤害倍率</label>
+                <input type="text" name="PalDamageRateDefense" id="PalDamageRateDefense" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PlayerDamageRateAttack" class="block mb-2">玩家造成的伤害倍率</label>
+                <input type="text" name="PlayerDamageRateAttack" id="PlayerDamageRateAttack" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PlayerDamageRateDefense" class="block mb-2">玩家受到的伤害倍率</label>
+                <input type="text" name="PlayerDamageRateDefense" id="PlayerDamageRateDefense" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PlayerStomachDecreaceRate" class="block mb-2">玩家饥饿消耗倍率</label>
+                <input type="text" name="PlayerStomachDecreaceRate" id="PlayerStomachDecreaceRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PlayerStaminaDecreaceRate" class="block mb-2">玩家耐力降低倍率</label>
+                <input type="text" name="PlayerStaminaDecreaceRate" id="PlayerStaminaDecreaceRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PlayerAutoHPRegeneRate" class="block mb-2">玩家自动HP恢复倍率</label>
+                <input type="text" name="PlayerAutoHPRegeneRate" id="PlayerAutoHPRegeneRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PlayerAutoHpRegeneRateInSleep" class="block mb-2">玩家睡眠HP恢复倍率</label>
+                <input type="text" name="PlayerAutoHpRegeneRateInSleep" id="PlayerAutoHpRegeneRateInSleep" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PalStomachDecreaceRate" class="block mb-2">帕鲁饥饿消耗倍率</label>
+                <input type="text" name="PalStomachDecreaceRate" id="PalStomachDecreaceRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PalStaminaDecreaceRate" class="block mb-2">帕鲁耐力降低倍率</label>
+                <input type="text" name="PalStaminaDecreaceRate" id="PalStaminaDecreaceRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PalAutoHPRegeneRate" class="block mb-2">帕鲁受伤时HP自动恢复的速度</label>
+                <input type="text" name="PalAutoHPRegeneRate" id="PalAutoHPRegeneRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PalAutoHpRegeneRateInSleep" class="block mb-2">帕鲁睡眠时恢复多少HP倍率</label>
+                <input type="text" name="PalAutoHpRegeneRateInSleep" id="PalAutoHpRegeneRateInSleep" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="BuildObjectDamageRate" class="block mb-2">建筑伤害倍率</label>
+                <input type="text" name="BuildObjectDamageRate" id="BuildObjectDamageRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="BuildObjectDeteriorationDamageRate" class="block mb-2">建筑在一段时间内将受到的伤害倍率</label>
+                <input type="text" name="BuildObjectDeteriorationDamageRate" id="BuildObjectDeteriorationDamageRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="CollectionDropRate" class="block mb-2">树木或岩石等物体的掉落倍率</label>
+                <input type="text" name="CollectionDropRate" id="CollectionDropRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="CollectionObjectHpRate" class="block mb-2">树木或岩石等物体的血量倍率</label>
+                <input type="text" name="CollectionObjectHpRate" id="CollectionObjectHpRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="CollectionObjectRespawnSpeedRate" class="block mb-2">树木或岩石等物体中的刷新速度倍率</label>
+                <input type="text" name="CollectionObjectRespawnSpeedRate" id="CollectionObjectRespawnSpeedRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="EnemyDropItemRate" class="block mb-2">敌人掉落物品的倍率</label>
+                <input type="text" name="EnemyDropItemRate" id="EnemyDropItemRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="DeathPenalty" class="block mb-2">死亡掉落设置，None：无丢失，Item：没有装备的丢失物品，ItemAndEquipment：丢失的物品和装备，All：丢失所有物品、装备、伙伴（在库存中）</label>
+                <input type="text" name="DeathPenalty" id="DeathPenalty" value="All" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="bEnableAimAssistPad" class="block mb-2">允许您启用或禁用瞄准辅助</label>
+                <input type="text" name="bEnableAimAssistPad" id="bEnableAimAssistPad" value="True" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="bEnableAimAssistKeyboard" class="block mb-2">允许您启用或禁用瞄准辅助</label>
+                <input type="text" name="bEnableAimAssistKeyboard" id="bEnableAimAssistKeyboard" value="False" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="DropItemMaxNum" class="block mb-2">一次允许丢弃的最大项目数量</label>
+                <input type="text" name="DropItemMaxNum" id="DropItemMaxNum" value="3000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="BaseCampMaxNum" class="block mb-2">一次可以建造的最大基地数量</label>
+                <input type="text" name="BaseCampMaxNum" id="BaseCampMaxNum" value="128" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="BaseCampWorkerMaxNum" class="block mb-2">营地中可以容纳的最大工人伙伴数量</label>
+                <input type="text" name="BaseCampWorkerMaxNum" id="BaseCampWorkerMaxNum" value="15" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="DropItemAliveMaxHours" class="block mb-2">掉落的物品在消失之前会停留多长时间</label>
+                <input type="text" name="DropItemAliveMaxHours" id="DropItemAliveMaxHours" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="bAutoResetGuildNoOnlinePlayers" class="block mb-2">如果改为True，则如果没有玩家在线，公会将被解散</label>
+                <input type="text" name="bAutoResetGuildNoOnlinePlayers" id="bAutoResetGuildNoOnlinePlayers" value="False" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="AutoResetGuildTimeNoOnlinePlayers" class="block mb-2">不活跃的公会解散的时间（小时）</label>
+                <input type="text" name="AutoResetGuildTimeNoOnlinePlayers" id="AutoResetGuildTimeNoOnlinePlayers" value="72.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="GuildPlayerMaxNum" class="block mb-2">最大公会玩家数量</label>
+                <input type="text" name="GuildPlayerMaxNum" id="GuildPlayerMaxNum" value="20" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PalEggDefaultHatchingTime" class="block mb-2">孵化帕鲁蛋需要多长时间（小时）</label>
+                <input type="text" name="PalEggDefaultHatchingTime" id="PalEggDefaultHatchingTime" value="72.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="WorkSpeedRate" class="block mb-2">工作速度倍率</label>
+                <input type="text" name="WorkSpeedRate" id="WorkSpeedRate" value="1.000000" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="CoopPlayerMaxNum" class="block mb-2">群中的最大玩家数量</label>
+                <input type="text" name="CoopPlayerMaxNum" id="CoopPlayerMaxNum" value="4" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="ServerPlayerMaxNum" class="block mb-2">服务器上允许的最大玩家数（上限为 32）</label>
+                <input type="text" name="ServerPlayerMaxNum" id="ServerPlayerMaxNum" value="32" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="ServerName" class="block mb-2">服务器名称</label>
+                <input type="text" name="ServerName" id="ServerName" value="Default Palworld Server" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="ServerDescription" class="block mb-2">在列表中选择服务器时显示的内容</label>
+                <input type="text" name="ServerDescription" id="ServerDescription" value="" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="AdminPassword" class="block mb-2">用于授予管理员访问权限的密码</label>
+                <input type="text" name="AdminPassword" id="AdminPassword" value="" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="ServerPassword" class="block mb-2">普通玩家加入所需的密码</label>
+                <input type="text" name="ServerPassword" id="ServerPassword" value="" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PublicPort" class="block mb-2">公开服务器端口号，默认8211，需要修改为当前的端口</label>
+                <input type="text" name="PublicPort" id="PublicPort" value="8211" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="PublicIP" class="block mb-2">公开服务器的IP，可以留空，系统会自动检测</label>
+                <input type="text" name="PublicIP" id="PublicIP" value="" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="RCONEnabled" class="block mb-2">是否启用 RCON</label>
+                <input type="text" name="RCONEnabled" id="RCONEnabled" value="False" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <label for="RCONPort" class="block mb-2">RCON 的默认端口号</label>
+                <input type="text" name="RCONPort" id="RCONPort" value="25575" class="w-full p-2 border rounded">
+            </div>
+            <div>
+                <input type="submit" value="生成配置文件" class="w-full p-2 bg-blue-500 text-white rounded cursor-pointer">
+            </div>
+        </form>
+        <script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // 获取表单数据
+        var formData = new FormData(e.target);
+        // 发送请求到 generate_config.php
+        fetch('generate_config.php', {
+            method: 'POST',
+            body: formData
+        }).then(function(response) {
+            return response.text();
+        }).then(function(data) {
+            // 更新 wget 命令
+            var wgetCommand = 'wget -O PalWorldSettings.ini ' + data;
+            document.querySelector('#wget-command').textContent = wgetCommand;
+        });
+    });
+
+    // 初始化 clipboard.js
+    new ClipboardJS('.btn');
+</script>
+
+        
+        <div class="my-4">
+            <h3 class="text-lg font-semibold">wget 命令：</h3>
+            <pre><code id="wget-command" class="language-bash"></code></pre>
+            <button class="btn bg-blue-500 text-white p-2 rounded mt-2" data-clipboard-target="#wget-command">复制</button>
+        </div>
+        
+    </div>
+</body>
+</html>
